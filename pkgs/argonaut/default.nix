@@ -9,22 +9,22 @@ system ? builtins.currentSystem
 }:
 let
   shaMap = {
-    x86_64-linux = "197ji7b3f4qd1l2gsrgl75kzpqyfmnqy5n7ms4dhy63c86qjz92y";
-    aarch64-linux = "0xrvsz6162ac7rjdgdisk2nw1dsrfhv8dsf7ksnq76d6wkrnz3q1";
-    x86_64-darwin = "0njf3rlcqyrwfwl7h9v6qlhkm1bpyxwizl8kjmlbbj2ad8bzfcyq";
-    aarch64-darwin = "03906mhrz87rpqijcf8nlavzx0smfv38rrchiblpk02ahf89k7kv";
+    x86_64-linux = "0nh77qdv9y4dyd2gxhjvpv2f9mi25ccg41gr0j91cdig84m1q5n6";
+    aarch64-linux = "0wqs2l212pp5z6f8aah0mz7d1qxsfyqmprps58ryv3dis863abpc";
+    x86_64-darwin = "16xwyirivjpg2g33nli356irkdpwg75fw07qxbj4ik4kbjhwnvxh";
+    aarch64-darwin = "0wkkpypxwrfq1hgkc2930vwya6a4j20rwgm27sbzdf1aqckp5dfc";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/darksworm/argonaut/releases/download/v1.10.2/argonaut-1.10.2-linux-amd64.tar.gz";
-    aarch64-linux = "https://github.com/darksworm/argonaut/releases/download/v1.10.2/argonaut-1.10.2-linux-arm64.tar.gz";
-    x86_64-darwin = "https://github.com/darksworm/argonaut/releases/download/v1.10.2/argonaut-1.10.2-darwin-amd64.tar.gz";
-    aarch64-darwin = "https://github.com/darksworm/argonaut/releases/download/v1.10.2/argonaut-1.10.2-darwin-arm64.tar.gz";
+    x86_64-linux = "https://github.com/darksworm/argonaut/releases/download/v1.11.0/argonaut-1.11.0-linux-amd64.tar.gz";
+    aarch64-linux = "https://github.com/darksworm/argonaut/releases/download/v1.11.0/argonaut-1.11.0-linux-arm64.tar.gz";
+    x86_64-darwin = "https://github.com/darksworm/argonaut/releases/download/v1.11.0/argonaut-1.11.0-darwin-amd64.tar.gz";
+    aarch64-darwin = "https://github.com/darksworm/argonaut/releases/download/v1.11.0/argonaut-1.11.0-darwin-arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "argonaut";
-  version = "1.10.2";
+  version = "1.11.0";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
