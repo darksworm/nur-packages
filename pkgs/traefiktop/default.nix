@@ -9,22 +9,22 @@ system ? builtins.currentSystem
 }:
 let
   shaMap = {
-    x86_64-linux = "0biczh3siq3dj619493ps0sg24gyyjf52kfpsfkqv8bjn6mx0jiz";
-    aarch64-linux = "0m9772lrihij5aa3y11pcrf3n5y3yszdw4b6rak0m05akaqfprg7";
-    x86_64-darwin = "16z16g0ic3g8l5qjh2746a51wg3vakfbf6d6gpp3f56pn9916mny";
-    aarch64-darwin = "08fvrd41nq6i6py30la4f33sqv3my1pkg8mqsy984a38w0c4hhai";
+    x86_64-linux = "0rllpakm3wq992dns7hq48krz8yhnilf8fxhrzdxq8g7shxvlib8";
+    aarch64-linux = "0xd1khmf3jx7ddw7g1ij6mfgi16yqq2lji3jjh3px4fmwhqg8z8q";
+    x86_64-darwin = "01w31qyvp86bhmdz6c1nra58ibfjm5786i67c22yj9j4j3sghy6d";
+    aarch64-darwin = "1811vdghsaznlbr6h50gjz8i1c0l64jvqbydkqggwpziqn5fx8d4";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/darksworm/traefiktop/releases/download/v1.0.1/traefiktop-1.0.1-linux-amd64.tar.gz";
-    aarch64-linux = "https://github.com/darksworm/traefiktop/releases/download/v1.0.1/traefiktop-1.0.1-linux-arm64.tar.gz";
-    x86_64-darwin = "https://github.com/darksworm/traefiktop/releases/download/v1.0.1/traefiktop-1.0.1-darwin-amd64.tar.gz";
-    aarch64-darwin = "https://github.com/darksworm/traefiktop/releases/download/v1.0.1/traefiktop-1.0.1-darwin-arm64.tar.gz";
+    x86_64-linux = "https://github.com/darksworm/traefiktop/releases/download/v1.1.0/traefiktop-1.1.0-linux-amd64.tar.gz";
+    aarch64-linux = "https://github.com/darksworm/traefiktop/releases/download/v1.1.0/traefiktop-1.1.0-linux-arm64.tar.gz";
+    x86_64-darwin = "https://github.com/darksworm/traefiktop/releases/download/v1.1.0/traefiktop-1.1.0-darwin-amd64.tar.gz";
+    aarch64-darwin = "https://github.com/darksworm/traefiktop/releases/download/v1.1.0/traefiktop-1.1.0-darwin-arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "traefiktop";
-  version = "1.0.1";
+  version = "1.1.0";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
